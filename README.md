@@ -1,4 +1,5 @@
-### When we run `FFmpeg` coversion function it convets `.mp4` file into an `HLS` format, it generate 2 types of file.
+# How does this work?
+## When we run `FFmpeg` coversion function it convets `.mp4` file into an `HLS` format, it generate 2 types of file.
 ## `.m3u8` file
 ### What is this 🤔:
 
@@ -9,6 +10,7 @@
 
   - The .m3u8 file acts as an index or manifest for the video player.
   - It tells the player where to find the .ts files and in what order to play them.
+  - Example
 ```bash
 #EXTM3U
 #EXT-X-VERSION:3
@@ -23,9 +25,9 @@ segment2.ts
 #EXT-X-ENDLIST
 ```
 
-- #EXTM3U: Indicates the file is an extended M3U playlist.
-- #EXT-X-TARGETDURATION: The maximum duration (in seconds) of each segment.
-- #EXTINF: The duration of each segment.
+- `#EXTM3U`: Indicates the file is an extended M3U playlist.
+- `#EXT-X-TARGETDURATION`: The maximum duration (in seconds) of each segment.
+- `#EXTINF`: The duration of each segment.
 segment0.ts, segment1.ts, etc.: References to the .ts files.
 
 ## `.ts` Files
@@ -53,8 +55,8 @@ The player downloads and plays one segment at a time, allowing for adaptive stre
   - Code Editor
 - Get the project .
   ```bash
-  git clone 
-  cd HLSNODEJS
+  git clone https://github.com/Adityasinghvats/Node-HLS-Example.git 
+  cd Node-HLS-Example
   npm install
   ```
 - Add video of your choice with name  `video.mp4` to new folder `videos` under `src` folder .
@@ -69,3 +71,4 @@ The player downloads and plays one segment at a time, allowing for adaptive stre
   node app.js
   ```
 - Access the playback at `http://localhost:8000/` .
+## For any queries contact me 🫡
